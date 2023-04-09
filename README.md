@@ -5,7 +5,7 @@
 
 ## Input
 - Pairs of values are taken from the file input.txt , which contains the following values:
-![input](http://url/to/img.png)
+![input](https://github.com/GorokhovSemyon/Simple_RANSAC/blob/develop/src/input.png)
 
 ## Run
 > $ cmake .
