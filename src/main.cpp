@@ -5,7 +5,7 @@
 
 void fillArrays(int Z[], int T[]) {
   // Path to file can be different
-  std::ifstream infile("input.txt");
+  std::ifstream infile("src/input.txt");
   if (!infile) {
     std::cout << "Error opening file!" << std::endl;
     return;
