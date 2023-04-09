@@ -32,11 +32,11 @@ void Ransac::iter() {
   }
 }
 
-bool compareInd(Model a, Model b) { return (a.indexes.first < b.indexes.first); }
+bool isIndLess(Model a, Model b) { return (a.indexes.first < b.indexes.first); }
 
 void Ransac::printAll() {
   // Debug method
-  sort(models.begin(), models.end(), compareInd);
+  sort(models.begin(), models.end(), isIndLess);
 
   for (int i = 0; i < models.size(); i++) {
     std::cout << std::setw(3) << i + 1 << std::setw(8) << "("
@@ -46,10 +46,10 @@ void Ransac::printAll() {
   }
 }
 
-bool compareEps(Model a, Model b) { return (a.currentEpsilon < b.currentEpsilon); }
+bool isEpsLess(Model a, Model b) { return (a.currentEpsilon < b.currentEpsilon); }
 
 void Ransac::result() {
-  sort(models.begin(), models.end(), compareEps);
+  sort(models.begin(), models.end(), isEpsLess);
 
   Model m = models[0];
 
